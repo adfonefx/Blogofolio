@@ -1,0 +1,84 @@
+.burgerBTNclosed{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 84px;
+    height: 84px;
+    background-color: #2231AA;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    border-right: 1px solid #5360CD;
+}
+.burgerBTNclosed>span,
+.burgerBTNclosed>span::before,
+.burgerBTNclosed>span::after {
+    content: ' ';
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    transition: 0.3s;
+}
+.burgerBTNclosed span:before {
+    transform: translateY(-8px);
+}
+.burgerBTNclosed span:after {
+    transform: translateY(8px);
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+.burgerBTNopened{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 84px;
+    height: 84px;
+    background-color: #2231AA;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    border-right: 1px solid #5360CD;
+}
+.burgerBTNopened>span,
+.burgerBTNopened>span::before,
+.burgerBTNopened>span::after {
+    content: ' ';
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    transition: 0.3s;
+}
+.burgerBTNopened span:before {
+    transform: translateY(-8px);
+}
+
+.burgerBTNopened span:after {
+    transform: translateY(8px);
+}
+.burgerBTNopened>span {
+    background-color: rgba(255, 255, 255, 0);
+}
+.burgerBTNopened>span::before {
+    transform: rotate(-45deg);
+}
+
+.burgerBTNopened>span::after {
+    transform: rotate(45deg);
+}
