@@ -1,27 +1,35 @@
 import React, { useState } from 'react';
 import toggleBTN from './BurgerBTNtoggle.module.scss';
 import menuBTN from './BurgerMenu.module.scss'
+import { useTheme } from '../../../ThemeContext'
+import ThemeButtons from '../ThemeButtons/ThemeButtons'
 
-interface BurgerProps{
-    className?: string;
+interface BurgerProps {
+  className?: string;
 }
 
-const NavMenu = ({className}: BurgerProps) => {
-  const [isOpened, setIsOpened] = useState(false)
-  
+const NavMenu: React.FC<BurgerProps> = ({ className }) => {
+  const { theme } = useTheme();
+  const [isOpened, setIsOpened] = useState(false);
+
   return (
     <>
-      <button onClick={() => setIsOpened((state)=> !state)} 
-      className = {isOpened ? toggleBTN.burgerBTNopened : toggleBTN.burgerBTNclosed}>
+      <button
+        onClick={() => setIsOpened((state) => !state)}
+        className={isOpened ? toggleBTN.burgerBTNopened : toggleBTN.burgerBTNclosed}
+      >
         <span></span>
       </button>
       <div className={isOpened ? menuBTN.menu : menuBTN.menuClosed}>
-        <div className={menuBTN.top}>123</div>
-        <div className={menuBTN.bottom}>321</div>
+        <div className={menuBTN.top}>{theme}</div>
+        <div className={menuBTN.bottom}>
+            <ThemeButtons />
+            <div className={menuBTN.sign}>SIGN IN</div>
+        </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default NavMenu
+export default NavMenu;
 

@@ -1,0 +1,17 @@
+.buttons{
+    width: 237px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+}
+.buttons>button{
+    width: 118px;
+    height: 80px;
+    background-color: white;
+}
+.buttons>button{
+    border: none;
+}
